@@ -17,13 +17,15 @@ pipeline {
 		}
 
 		stage("deploy") {
+			when {
+				expression {
+					BRANCH_NAME == 'main'
+				}
+				echo "Hallå där"
+			}
 			steps {
 				echo "deploying the application..."
 			}
 		}
 	}
-}
-
-node {
-
 }
