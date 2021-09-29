@@ -1,1 +1,2 @@
-echo "tjaba"
+hello: 
+  echo "tjaba"
